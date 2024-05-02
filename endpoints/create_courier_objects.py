@@ -28,7 +28,7 @@ class CreateCourier:
         # возвращаем список с учетными данными
         return [login, password, first_name]
 
-    # Метод создания курьера
+    # Метод создания курьера с уникальными данными
     def create_courier(self):
         self.login_pass = self.register_new_courier_and_return_login_password()
         login, password, first_name = self.login_pass
@@ -39,7 +39,20 @@ class CreateCourier:
         })
         self.response_status = self.response.status_code
 
+    # Метод создания курьера не с уникальными данными
+    def create_duplicate_courier(self):
+        payload = {
+            "login": "ninja",
+            "password": "1234",
+            "firstName": "saske"
+        }
+
+        self.response = requests.post(f'{URL}api/v1/courier', data=payload)
+
     # Метод проверяет статус код после создания курьера
     def check_create_courier_is_201(self):
         assert self.response.status_code == 201
 
+    # Метод проверяет статус код после создания существующего курьера
+    def check_create_courier_is_409(self):
+        assert self.response.status_code == 409
