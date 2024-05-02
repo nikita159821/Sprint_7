@@ -1,4 +1,5 @@
 from endpoints.create_courier_objects import CreateCourier
+from endpoints.create_order_objects import CreateOrder
 from endpoints.login_courier_objects import LoginCourier
 
 
@@ -38,3 +39,21 @@ def test_login_with_invalid_credentials():
     invalid_credentials = LoginCourier()
     invalid_credentials.login_with_invalid_credentials()
     invalid_credentials.check_login_with_invalid_credentials_is_404()
+
+
+def test_send_color_request():
+    send_color_request = CreateOrder()
+    send_color_request.send_color_request_black()
+    send_color_request.check_response_is_201()
+
+
+def test_send_color_request_black_and_grey():
+    color_request_black_and_grey = CreateOrder()
+    color_request_black_and_grey.send_color_request_black_and_grey()
+    color_request_black_and_grey.check_response_is_201()
+
+
+def test_send_order_request():
+    send_order_request = CreateOrder()
+    send_order_request.send_order_request()
+    send_order_request.check_response_is_201()
