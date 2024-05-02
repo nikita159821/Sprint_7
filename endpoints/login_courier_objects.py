@@ -34,3 +34,8 @@ class LoginCourier(Endpoints):
         assert response_body["code"] == 404
         assert response_body["message"] == MESSAGE_CHECK_LOGIN_WITH_INVALID_CREDENTIALS
 
+    # Метод проверяет, что возвращается id пользователя в теле
+    def check_response_is_id(self):
+        response_body = self.response.json()
+        assert response_body["id"] == 297526
+

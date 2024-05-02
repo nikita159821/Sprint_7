@@ -24,6 +24,7 @@ def test_login_courier():
     login_courier = LoginCourier()
     login_courier.login_courier()
     login_courier.check_response_is_200()
+    login_courier.check_response_is_id()
 
 
 def test_login_courier_empty_payload():
