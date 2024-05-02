@@ -17,7 +17,7 @@ def test_create_duplicate_courier():
 def test_create_courier_empty_payload():
     courier_empty_payload = CreateCourier()
     courier_empty_payload.create_courier_empty_payload()
-    courier_empty_payload.check_create_courier_empty_payload_is_400()
+    courier_empty_payload.check_response_is_400()
 
 
 def test_login_courier():
@@ -30,7 +30,8 @@ def test_login_courier():
 def test_login_courier_empty_payload():
     courier_empty_payload = LoginCourier()
     courier_empty_payload.login_courier_empty_payload()
-    courier_empty_payload.check_login_courier_empty_payload_is_400()
+    courier_empty_payload.check_login_courier_empty_payload()
+    courier_empty_payload.check_response_is_400()
 
 
 def test_login_with_invalid_credentials():

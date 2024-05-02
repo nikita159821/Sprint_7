@@ -17,10 +17,9 @@ class LoginCourier(Endpoints):
         payload = COURIER_LOGIN
         self.response = requests.post(f'{URL}api/v1/courier/login', data=payload)
 
-    # Метод проверяет статус код и тело после авторзиции без пароля
-    def check_login_courier_empty_payload_is_400(self):
+    # Метод проверяет тело после авторзиции без пароля
+    def check_login_courier_empty_payload(self):
         response_body = self.response.json()
-        assert response_body["code"] == 400
         assert response_body["message"] == MESSAGE_CHECK_LOGIN_COURIER_EMPTY
 
     # Система вернёт ошибку, если неправильно указать логин или пароль

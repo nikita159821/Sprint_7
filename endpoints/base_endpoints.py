@@ -11,6 +11,9 @@ class Endpoints:
     def check_response_is_200(self):
         assert self.response.status_code == 200
 
+    def check_response_is_400(self):
+        assert self.response.status_code == 400
+
     # Генерируем login, password, first_name
     def register_new_courier_and_return_login_password(self):
         # метод генерирует строку, состоящую только из букв нижнего регистра, в качестве параметра передаём длину строки

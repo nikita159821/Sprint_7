@@ -27,7 +27,6 @@ class CreateCourier(Endpoints):
         assert response_body["message"] == MESSAGE_CHECK_CREATE_DUPLICATE
 
     # Метод проверяет статус код после создания курьера без данных для регистрации
-    def check_create_courier_empty_payload_is_400(self):
+    def check_create_courier_empty_payload(self):
         response_body = self.response.json()
-        assert response_body["code"] == 400
         assert response_body["message"] == MESSAGE_CHECK_CREATE_COURIER_EMPTY
