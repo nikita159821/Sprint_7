@@ -6,10 +6,11 @@ from tests.data import URL
 
 
 class CreateCourier:
-    response = None
-    response_data = None
-    response_status = None
-    login_pass = None
+
+    def __init__(self):
+        self.response_status = None
+        self.response = None
+        self.login_pass = None
 
     # Метод создания курьера
     def create_courier(self):
