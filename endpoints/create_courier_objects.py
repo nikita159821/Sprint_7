@@ -59,8 +59,12 @@ class CreateCourier:
 
     # Метод проверяет статус код после создания существующего курьера
     def check_create_duplicate_courier_is_409(self):
-        assert self.response.status_code == 409
+        response_body = self.response.json()
+        assert response_body["code"] == 409
+        assert response_body["message"] == "Этот логин уже используется. Попробуйте другой."
 
-    # Метод проверяет статус код после создания существующего курьера
+    # Метод проверяет статус код после создания курьера без данных для регистрации
     def check_create_courier_empty_payload_is_400(self):
-        assert self.response.status_code == 400
+        response_body = self.response.json()
+        assert response_body["code"] == 400
+        assert response_body["message"] == "Недостаточно данных для создания учетной записи"
