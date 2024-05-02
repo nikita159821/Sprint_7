@@ -57,3 +57,9 @@ def test_send_order_request():
     send_order_request = CreateOrder()
     send_order_request.send_order_request()
     send_order_request.check_response_is_201()
+
+
+def test_check_send_request():
+    heck_send_request = CreateOrder()
+    heck_send_request.send_request_and_check()
+    heck_send_request.check_send_request()

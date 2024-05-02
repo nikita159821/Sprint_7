@@ -23,3 +23,12 @@ class CreateOrder(Endpoints):
         payload = json.dumps(ORDER)  # Преобразуем словарь в JSON-строку
         self.response = requests.post(f'{URL}api/v1/orders', data=payload)
 
+    # тело ответа содержит track.
+    def send_request_and_check(self):
+        payload = json.dumps(ORDER)  # Преобразуем словарь в JSON-строку
+        self.response = requests.post(f'{URL}api/v1/orders', data=payload)
+
+    # Метод проверяет, что в теле возвращается track
+    def check_send_request(self):
+        response_body = self.response.json()
+        assert "track" in response_body
