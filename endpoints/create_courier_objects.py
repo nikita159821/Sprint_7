@@ -1,20 +1,15 @@
 import requests
 from endpoints.base_endpoints import Endpoints
 
-from tests.data import URL, CREATE_DUPLICATE_COURIER
+from tests.data import URL, CREATE_DUPLICATE_COURIER, MESSAGE_CHECK_CREATE_DUPLICATE, MESSAGE_CHECK_CREATE_COURIER_EMPTY
 
 
 class CreateCourier(Endpoints):
 
     # Метод создания курьера с уникальными данными
     def create_courier(self):
-        self.login_pass = self.register_new_courier_and_return_login_password()
-        login, password, first_name = self.login_pass
-        self.response = requests.post(f'{URL}api/v1/courier', data={
-            "login": login,
-            "password": password,
-            "firstName": first_name
-        })
+        payload = self.register_new_courier_and_return_login_password()
+        self.response = requests.post(f'{URL}api/v1/courier', json=payload)
 
     # Метод создания курьера не с уникальными данными
     def create_duplicate_courier(self):
@@ -29,10 +24,10 @@ class CreateCourier(Endpoints):
     def check_create_duplicate_courier_is_409(self):
         response_body = self.response.json()
         assert response_body["code"] == 409
-        assert response_body["message"] == "Этот логин уже используется. Попробуйте другой."
+        assert response_body["message"] == MESSAGE_CHECK_CREATE_DUPLICATE
 
     # Метод проверяет статус код после создания курьера без данных для регистрации
     def check_create_courier_empty_payload_is_400(self):
         response_body = self.response.json()
         assert response_body["code"] == 400
-        assert response_body["message"] == "Недостаточно данных для создания учетной записи"
+        assert response_body["message"] == MESSAGE_CHECK_CREATE_COURIER_EMPTY

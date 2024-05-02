@@ -22,5 +22,6 @@ class Endpoints:
         password = generate_random_string(10)
         first_name = generate_random_string(10)
 
-        # возвращаем список с учетными данными
-        return [login, password, first_name]
+        # возвращаем словарь с учетными данными
+        payload = {"login": login, "password": password, "firstName": first_name}
+        return payload
