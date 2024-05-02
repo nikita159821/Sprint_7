@@ -1,6 +1,7 @@
 import requests
 import random
 import string
+
 from tests.data import URL
 
 
@@ -10,6 +11,7 @@ class CreateCourier:
     response_status = None
     login_pass = None
 
+    # Метод создания курьера
     def create_courier(self):
         self.login_pass = self.register_new_courier_and_return_login_password()
         login, password, first_name = self.login_pass
@@ -20,9 +22,11 @@ class CreateCourier:
         })
         self.response_status = self.response.status_code
 
+    # Метод проверяет статус код после создания курьера
     def check_create_courier_is_201(self):
         assert self.response.status_code == 201
 
+    # Генерируем login, password, first_name
     def register_new_courier_and_return_login_password(self):
         # метод генерирует строку, состоящую только из букв нижнего регистра, в качестве параметра передаём длину строки
         def generate_random_string(length):
