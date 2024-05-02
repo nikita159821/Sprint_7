@@ -41,25 +41,7 @@ def test_login_with_invalid_credentials():
     invalid_credentials.check_login_with_invalid_credentials_is_404()
 
 
-def test_send_color_request():
-    send_color_request = CreateOrder()
-    send_color_request.send_color_request_black()
-    send_color_request.check_response_is_201()
-
-
-def test_send_color_request_black_and_grey():
-    color_request_black_and_grey = CreateOrder()
-    color_request_black_and_grey.send_color_request_black_and_grey()
-    color_request_black_and_grey.check_response_is_201()
-
-
-def test_send_order_request():
-    send_order_request = CreateOrder()
-    send_order_request.send_order_request()
-    send_order_request.check_response_is_201()
-
-
-def test_check_send_request():
-    heck_send_request = CreateOrder()
-    heck_send_request.send_request_and_check()
-    heck_send_request.check_send_request()
+def test_create_order(order_data):
+    order = CreateOrder()
+    order.send_order_request(order_data)
+    order.check_send_request()
