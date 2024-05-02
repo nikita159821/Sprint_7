@@ -1,4 +1,5 @@
 from endpoints.create_courier_objects import CreateCourier
+from endpoints.login_courier_objects import LoginCourier
 
 
 def test_create_courier():
@@ -17,3 +18,9 @@ def test_create_courier_empty_payload():
     courier_empty_payload = CreateCourier()
     courier_empty_payload.create_courier_empty_payload()
     courier_empty_payload.check_create_courier_empty_payload_is_400()
+
+
+def test_login_courier():
+    login_courier = LoginCourier()
+    login_courier.login_courier()
+    login_courier.check_response_is_200()
