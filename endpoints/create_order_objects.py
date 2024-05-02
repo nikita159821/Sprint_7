@@ -1,10 +1,8 @@
 import json
-
-import pytest
 import requests
 
 from endpoints.base_endpoints import Endpoints
-from tests.data import ORDER_COLOR_BLACK, URL, ORDER_COLOR_BLACK_AND_GREY, ORDER
+from tests.data import URL
 
 
 class CreateOrder(Endpoints):
