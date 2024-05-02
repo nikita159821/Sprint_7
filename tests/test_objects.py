@@ -10,4 +10,10 @@ def test_create_courier():
 def test_create_duplicate_courier():
     duplicate_courier = CreateCourier()
     duplicate_courier.create_duplicate_courier()
-    duplicate_courier.check_create_courier_is_409()
+    duplicate_courier.check_create_duplicate_courier_is_409()
+
+
+def test_create_courier_empty_payload():
+    courier_empty_payload = CreateCourier()
+    courier_empty_payload.create_courier_empty_payload()
+    courier_empty_payload.check_create_courier_empty_payload_is_400()

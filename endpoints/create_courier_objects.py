@@ -49,10 +49,18 @@ class CreateCourier:
 
         self.response = requests.post(f'{URL}api/v1/courier', data=payload)
 
+    # Метод создания курьера без данных для регистрации
+    def create_courier_empty_payload(self):
+        self.response = requests.post(f'{URL}api/v1/courier')
+
     # Метод проверяет статус код после создания курьера
     def check_create_courier_is_201(self):
         assert self.response.status_code == 201
 
     # Метод проверяет статус код после создания существующего курьера
-    def check_create_courier_is_409(self):
+    def check_create_duplicate_courier_is_409(self):
         assert self.response.status_code == 409
+
+    # Метод проверяет статус код после создания существующего курьера
+    def check_create_courier_empty_payload_is_400(self):
+        assert self.response.status_code == 400
