@@ -1,6 +1,7 @@
 import random
 import string
 
+import allure
 import requests
 from endpoints.base_endpoints import Endpoints
 
@@ -9,7 +10,7 @@ from tests.data import URL, CREATE_DUPLICATE_COURIER, MESSAGE_CHECK_CREATE_DUPLI
 
 class CreateCourier(Endpoints):
 
-    # Генерируем login, password, first_name
+    @allure.step('Генерируем login, password, first_name')
     def register_new_courier_and_return_login_password(self):
         # метод генерирует строку, состоящую только из букв нижнего регистра, в качестве параметра передаём длину строки
         def generate_random_string(length):
@@ -17,26 +18,24 @@ class CreateCourier(Endpoints):
             random_string = ''.join(random.choice(letters) for i in range(length))
             return random_string
 
-        # генерируем логин, пароль и имя курьера
         login = generate_random_string(10)
         password = generate_random_string(10)
         first_name = generate_random_string(10)
 
-        # возвращаем словарь с учетными данными
         payload = {"login": login, "password": password, "firstName": first_name}
         return payload
 
-    # Метод создания курьера с уникальными данными
+    @allure.step('создаем курьера с уникальными данными')
     def create_courier(self):
         payload = self.register_new_courier_and_return_login_password()
         self.response = requests.post(f'{URL}api/v1/courier', json=payload)
 
-    # Метод создания курьера не с уникальными данными
+    @allure.step('создаем курьера не с уникальными данными')
     def create_duplicate_courier(self):
         payload = CREATE_DUPLICATE_COURIER
         self.response = requests.post(f'{URL}api/v1/courier', data=payload)
 
-    # Метод создания курьера без данных для регистрации
+    @allure.step('создаем курьера без данных для регистрации')
     def create_courier_empty_payload(self):
         self.response = requests.post(f'{URL}api/v1/courier')
 
