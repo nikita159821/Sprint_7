@@ -5,7 +5,7 @@ import pytest
 
 from tests.data import ORDER_COLOR_BLACK, ORDER_COLOR_BLACK_AND_GREY, ORDER
 
-# Добавляем путь к директории "pages"
+# Добавляем путь к директории
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
