@@ -1,3 +1,4 @@
+import allure
 import requests
 
 from endpoints.base_endpoints import Endpoints
@@ -7,7 +8,7 @@ from tests.data import COURIER_LOGIN_AND_PASSWORD, URL, COURIER_LOGIN, MESSAGE_C
 
 class LoginCourier(Endpoints):
 
-    # курьер может авторизоваться
+    @allure.step('Проходим авторизацию')
     def login_courier(self):
         payload = COURIER_LOGIN_AND_PASSWORD
         self.response = requests.post(f'{URL}api/v1/courier/login', data=payload)

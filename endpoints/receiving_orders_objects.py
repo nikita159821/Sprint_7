@@ -1,3 +1,4 @@
+import allure
 import requests
 
 from endpoints.base_endpoints import Endpoints
@@ -6,7 +7,7 @@ from tests.data import URL, COURIER_ID, ORDER_LIST
 
 class ReceivingOrders(Endpoints):
 
-    # возвращается список заказов
+    @allure.step('Возвращаем список заказов')
     def order_list(self):
         self.response = requests.get(f'{URL}api/v1/orders?{COURIER_ID}')
         print(self.response.json())

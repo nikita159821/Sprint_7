@@ -1,4 +1,6 @@
 import json
+
+import allure
 import requests
 
 from endpoints.base_endpoints import Endpoints
@@ -7,7 +9,7 @@ from tests.data import URL
 
 class CreateOrder(Endpoints):
 
-    # Создание заказа
+    @allure.step('Создаем заказ')
     def send_order_request(self, order_data):
         payload = json.dumps(order_data)
         self.response = requests.post(f'{URL}api/v1/orders', data=payload)
