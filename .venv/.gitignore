@@ -1,2 +1,6 @@
-# created by virtualenv automatically
-.idea
+# Игнорировать директорию venv
+.venv/
+
+# Игнорировать файлы и директории, связанные с PyCharm
+.idea/
+*.iml
