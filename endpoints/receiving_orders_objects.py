@@ -1,7 +1,7 @@
 import requests
 
 from endpoints.base_endpoints import Endpoints
-from tests.data import URL, TEST, COURIER_ID
+from tests.data import URL, COURIER_ID, ORDER_LIST
 
 
 class ReceivingOrders(Endpoints):
@@ -14,5 +14,5 @@ class ReceivingOrders(Endpoints):
     # Проверяем список заказов
     def check_order_list(self):
         response_body = self.response.json()
-        assert response_body == TEST
+        assert response_body == ORDER_LIST
 

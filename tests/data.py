@@ -63,7 +63,7 @@ ORDER = {
     "comment": "Saske, come back to Konoha"
 }
 
-TEST = {'orders':
+ORDER_LIST = {'orders':
             [{'id': 236364, 'courierId': 298008, 'firstName': 'Петр', 'lastName': 'Петров', 'address': 'ул. Ленина 11',
               'metroStation': '2', 'phone': '89504564545', 'rentTime': 1, 'deliveryDate': '2024-02-23T19:00:00.000Z',
               'track': 61731, 'color': ['BLACK'], 'comment': '', 'createdAt': '2024-01-29T15:35:30.471Z',
