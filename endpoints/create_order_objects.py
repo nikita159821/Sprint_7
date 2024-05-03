@@ -7,6 +7,7 @@ from tests.data import URL
 
 class CreateOrder(Endpoints):
 
+    # Создание заказа
     def send_order_request(self, order_data):
         payload = json.dumps(order_data)
         self.response = requests.post(f'{URL}api/v1/orders', data=payload)
