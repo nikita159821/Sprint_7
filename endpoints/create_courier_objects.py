@@ -40,18 +40,18 @@ class CreateCourier(ResponseChecker):
     def create_courier_empty_payload(self):
         self.response = requests.post(f'{URL}{COURIER}')
 
-    # Метод проверяет статус код после создания существующего курьера
+    @allure.step('Проверка статус кода после создания существующего курьера')
     def check_create_duplicate_courier_is_409(self):
         response_body = self.response.json()
         assert response_body["code"] == 409
         assert response_body["message"] == MESSAGE_CHECK_CREATE_DUPLICATE
 
-    # Метод проверяет статус код после создания курьера без данных для регистрации
+    @allure.step('Проверка статус кода после создания курьера без данных для регистрации')
     def check_create_courier_empty_payload(self):
         response_body = self.response.json()
         assert response_body["message"] == MESSAGE_CHECK_CREATE_COURIER_EMPTY
 
-    # Метод проверяет тело ответа после создания курьера
+    @allure.step('Проверка тела ответа после создания курьераи')
     def check_courier_creation_response_body(self):
         response_body = self.response.json()
         assert response_body["ok"] == MESSAGE_CHECK_CREATE_COURIER
