@@ -1,4 +1,4 @@
-class Endpoints:
+class ResponseChecker:
     response = None
 
     def check_response_is_201(self):

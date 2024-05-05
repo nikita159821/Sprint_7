@@ -3,11 +3,11 @@ import json
 import allure
 import requests
 
-from endpoints.base_endpoints import Endpoints
+from endpoints.base_response_checker import ResponseChecker
 from tests.data import URL
 
 
-class CreateOrder(Endpoints):
+class CreateOrder(ResponseChecker):
 
     @allure.step('Создаем заказ')
     def send_order_request(self, order_data):

@@ -1,12 +1,12 @@
 import allure
 import requests
 
-from endpoints.base_endpoints import Endpoints
+from endpoints.base_response_checker import ResponseChecker
 from tests.data import COURIER_LOGIN_AND_PASSWORD, URL, COURIER_LOGIN, MESSAGE_CHECK_LOGIN_COURIER_EMPTY, \
     INVALID_CREDENTIALS, MESSAGE_CHECK_LOGIN_WITH_INVALID_CREDENTIALS
 
 
-class LoginCourier(Endpoints):
+class LoginCourier(ResponseChecker):
 
     @allure.step('Проходим авторизацию')
     def login_courier(self):

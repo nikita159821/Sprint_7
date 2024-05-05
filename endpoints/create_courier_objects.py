@@ -3,12 +3,12 @@ import string
 
 import allure
 import requests
-from endpoints.base_endpoints import Endpoints
+from endpoints.base_response_checker import ResponseChecker
 
 from tests.data import URL, CREATE_DUPLICATE_COURIER, MESSAGE_CHECK_CREATE_DUPLICATE, MESSAGE_CHECK_CREATE_COURIER_EMPTY
 
 
-class CreateCourier(Endpoints):
+class CreateCourier(ResponseChecker):
 
     @allure.step('Генерируем login, password, first_name')
     def register_new_courier_and_return_login_password(self):
