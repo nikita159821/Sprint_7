@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3e5604a-862e-4640-8dc9-55609f7931f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/endpoints/create_order_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/create_order_objects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/login_courier_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/login_courier_objects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/receiving_orders_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/receiving_orders_objects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_create_courier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_login_courier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_objects.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,22 @@
       <recent name="$PROJECT_DIR$/endpoints" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_objects.test_order_list">
+  <component name="RunManager" selected="Python tests.Python tests for test_login_courier.Test">
+    <configuration name="Python tests for test_login_courier.Test" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_login_courier.Test&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for test_objects.test_create_order" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <option name="ENV_FILES" value="" />
@@ -94,21 +110,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_objects.test_create_order&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_objects.test_login_courier" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Sprint_7" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_objects.test_login_courier&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -159,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_login_courier.Test" />
         <item itemvalue="Python tests.Python tests for test_objects.test_order_list" />
         <item itemvalue="Python tests.Python tests for test_objects.test_create_order" />
         <item itemvalue="Python tests.Python tests for test_objects.test_login_with_invalid_credentials" />
         <item itemvalue="Python tests.Python tests for test_objects.test_login_courier_empty_payload" />
-        <item itemvalue="Python tests.Python tests for test_objects.test_login_courier" />
       </list>
     </recent_temporary>
   </component>
