@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3e5604a-862e-4640-8dc9-55609f7931f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/endpoints/create_courier_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/create_courier_objects.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_create_courier.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_create_courier.py" afterDir="false" />
-    </list>
+    <list default="true" id="f3e5604a-862e-4640-8dc9-55609f7931f8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +51,7 @@
   "keyToString": {
     "Python tests.Python tests for receiving_orders_objects.TestGetOrders.test_get_orders_by_courier_id.executor": "Run",
     "Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier.executor": "Run",
+    "Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier_empty_payload.executor": "Run",
     "Python tests.Python tests for test_login_courier.Test.executor": "Run",
     "Python tests.Python tests for test_objects.test.executor": "Run",
     "Python tests.Python tests for test_objects.test_check_send_request.executor": "Run",
@@ -83,7 +79,7 @@
       <recent name="$PROJECT_DIR$/endpoints" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier_empty_payload">
+  <component name="RunManager" selected="Python tests.Python tests for test_order.TestOrder">
     <configuration name="Python tests for test_create_courier.TestCreateCourie.test_create_courier" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <option name="ENV_FILES" value="" />
@@ -129,7 +125,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_objects.test_create_order" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_order.TestOrder" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -140,11 +136,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_objects.test_create_order&quot;" />
+      <option name="_new_target" value="&quot;test_order.TestOrder&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_objects.test_order_list" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_order.TestOrder.test_create_order" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -155,17 +151,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_objects.test_order_list&quot;" />
+      <option name="_new_target" value="&quot;test_order.TestOrder.test_create_order&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_order.TestOrder" />
+        <item itemvalue="Python tests.Python tests for test_order.TestOrder.test_create_order" />
         <item itemvalue="Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier_empty_payload" />
         <item itemvalue="Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier" />
         <item itemvalue="Python tests.Python tests for test_login_courier.Test" />
-        <item itemvalue="Python tests.Python tests for test_objects.test_order_list" />
-        <item itemvalue="Python tests.Python tests for test_objects.test_create_order" />
       </list>
     </recent_temporary>
   </component>
