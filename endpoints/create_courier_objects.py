@@ -52,8 +52,6 @@ class CreateCourier(ResponseChecker):
         assert response_body["message"] == MESSAGE_CHECK_CREATE_COURIER_EMPTY
 
     # Метод проверяет тело ответа после создания курьера
-
     def check_courier_creation_response_body(self):
         response_body = self.response.json()
-        print(response_body)
         assert response_body["ok"] == MESSAGE_CHECK_CREATE_COURIER

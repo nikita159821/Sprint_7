@@ -83,7 +83,7 @@
       <recent name="$PROJECT_DIR$/endpoints" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier">
+  <component name="RunManager" selected="Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier_empty_payload">
     <configuration name="Python tests for test_create_courier.TestCreateCourie.test_create_courier" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <option name="ENV_FILES" value="" />
@@ -96,6 +96,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_create_courier.TestCreateCourie.test_create_courier&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_create_courier.TestCreateCourie.test_create_courier_empty_payload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Sprint_7" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_create_courier.TestCreateCourie.test_create_courier_empty_payload&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -129,21 +144,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_objects.test_login_with_invalid_credentials" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Sprint_7" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_objects.test_login_with_invalid_credentials&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="Python tests for test_objects.test_order_list" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Sprint_7" />
       <option name="ENV_FILES" value="" />
@@ -161,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier_empty_payload" />
         <item itemvalue="Python tests.Python tests for test_create_courier.TestCreateCourie.test_create_courier" />
         <item itemvalue="Python tests.Python tests for test_login_courier.Test" />
         <item itemvalue="Python tests.Python tests for test_objects.test_order_list" />
         <item itemvalue="Python tests.Python tests for test_objects.test_create_order" />
-        <item itemvalue="Python tests.Python tests for test_objects.test_login_with_invalid_credentials" />
       </list>
     </recent_temporary>
   </component>

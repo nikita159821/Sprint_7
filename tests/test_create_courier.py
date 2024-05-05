@@ -17,3 +17,4 @@ class TestCreateCourie:
         courier_empty_payload = CreateCourier()
         courier_empty_payload.create_courier_empty_payload()
         courier_empty_payload.check_response_is_400()
+        courier_empty_payload.check_create_courier_empty_payload()
