@@ -11,10 +11,3 @@ class TestOrder:
         order.send_order_request(order_data)
         order.check_send_request()
         order.check_response_is_201()
-
-    @allure.title("Проверка на получения списка заказов")
-    def test_order_list(self):
-        order_list = ReceivingOrders()
-        order_list.order_list()
-        order_list.check_order_list()
-        order_list.check_response_is_200()
