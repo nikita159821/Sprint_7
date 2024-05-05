@@ -1,4 +1,5 @@
 URL = 'http://qa-scooter.praktikum-services.ru/'
+COURIER = 'api/v1/courier'
 
 COURIER_ID = 'courierId=298008'
 

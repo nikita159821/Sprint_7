@@ -5,7 +5,8 @@ import allure
 import requests
 from endpoints.base_response_checker import ResponseChecker
 
-from tests.data import URL, CREATE_DUPLICATE_COURIER, MESSAGE_CHECK_CREATE_DUPLICATE, MESSAGE_CHECK_CREATE_COURIER_EMPTY
+from tests.data import URL, CREATE_DUPLICATE_COURIER, MESSAGE_CHECK_CREATE_DUPLICATE, \
+    MESSAGE_CHECK_CREATE_COURIER_EMPTY, COURIER
 
 
 class CreateCourier(ResponseChecker):
@@ -28,16 +29,16 @@ class CreateCourier(ResponseChecker):
     @allure.step('создаем курьера с уникальными данными')
     def create_courier(self):
         payload = self.register_new_courier_and_return_login_password()
-        self.response = requests.post(f'{URL}api/v1/courier', json=payload)
+        self.response = requests.post(f'{URL}{COURIER}', json=payload)
 
     @allure.step('создаем курьера не с уникальными данными')
     def create_duplicate_courier(self):
         payload = CREATE_DUPLICATE_COURIER
-        self.response = requests.post(f'{URL}api/v1/courier', data=payload)
+        self.response = requests.post(f'{URL}{COURIER}', data=payload)
 
     @allure.step('создаем курьера без данных для регистрации')
     def create_courier_empty_payload(self):
-        self.response = requests.post(f'{URL}api/v1/courier')
+        self.response = requests.post(f'{URL}{COURIER}')
 
     # Метод проверяет статус код после создания существующего курьера
     def check_create_duplicate_courier_is_409(self):
