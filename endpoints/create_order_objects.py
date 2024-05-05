@@ -14,7 +14,7 @@ class CreateOrder(ResponseChecker):
         payload = json.dumps(order_data)
         self.response = requests.post(f'{URL}{ORDERS}', data=payload)
 
-    # Метод проверяет, что в теле возвращается track
+    @allure.step('Проверка, что в теле возвращается track')
     def check_send_request(self):
         response_body = self.response.json()
         assert "track" in response_body

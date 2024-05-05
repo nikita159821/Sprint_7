@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f3e5604a-862e-4640-8dc9-55609f7931f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/tests/test_login_courier.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_login_courier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/endpoints/create_order_objects.py" beforeDir="false" afterPath="$PROJECT_DIR$/endpoints/create_order_objects.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -11,7 +11,7 @@ class ReceivingOrders(ResponseChecker):
     def order_list(self):
         self.response = requests.get(f'{URL}{ORDERS}{COURIER_ID}')
 
-    # Проверяем список заказов
+    @allure.step('Проверяем список заказов')
     def check_order_list(self):
         response_body = self.response.json()
         assert response_body == ORDER_LIST
