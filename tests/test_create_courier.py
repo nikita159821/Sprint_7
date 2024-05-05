@@ -6,6 +6,7 @@ class TestCreateCourie:
         new_create_courier = CreateCourier()
         new_create_courier.create_courier()
         new_create_courier.check_response_is_201()
+        new_create_courier.check_courier_creation_response_body()
 
     def test_create_duplicate_courier(self):
         duplicate_courier = CreateCourier()

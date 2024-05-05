@@ -86,3 +86,4 @@ MESSAGE_CHECK_CREATE_DUPLICATE = 'Этот логин уже используе�
 MESSAGE_CHECK_CREATE_COURIER_EMPTY = 'Недостаточно данных для создания учетной записи'
 MESSAGE_CHECK_LOGIN_COURIER_EMPTY = 'Недостаточно данных для входа'
 MESSAGE_CHECK_LOGIN_WITH_INVALID_CREDENTIALS = 'Учетная запись не найдена'
+MESSAGE_CHECK_CREATE_COURIER = True

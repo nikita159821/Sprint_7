@@ -6,7 +6,7 @@ import requests
 from endpoints.base_response_checker import ResponseChecker
 
 from tests.data import URL, CREATE_DUPLICATE_COURIER, MESSAGE_CHECK_CREATE_DUPLICATE, \
-    MESSAGE_CHECK_CREATE_COURIER_EMPTY, COURIER
+    MESSAGE_CHECK_CREATE_COURIER_EMPTY, COURIER, MESSAGE_CHECK_CREATE_COURIER
 
 
 class CreateCourier(ResponseChecker):
@@ -50,3 +50,10 @@ class CreateCourier(ResponseChecker):
     def check_create_courier_empty_payload(self):
         response_body = self.response.json()
         assert response_body["message"] == MESSAGE_CHECK_CREATE_COURIER_EMPTY
+
+    # Метод проверяет тело ответа после создания курьера
+
+    def check_courier_creation_response_body(self):
+        response_body = self.response.json()
+        print(response_body)
+        assert response_body["ok"] == MESSAGE_CHECK_CREATE_COURIER
