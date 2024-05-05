@@ -3,6 +3,7 @@ COURIER = 'api/v1/courier'
 ORDERS = 'api/v1/orders?'
 LOGIN = 'api/v1/courier/login'
 COURIER_ID = 'courierId=298008'
+USER_ID = 297526
 
 CREATE_DUPLICATE_COURIER = {
     "login": "ninja",

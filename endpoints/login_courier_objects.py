@@ -3,7 +3,7 @@ import requests
 
 from endpoints.base_response_checker import ResponseChecker
 from tests.data import COURIER_LOGIN_AND_PASSWORD, URL, COURIER_LOGIN, MESSAGE_CHECK_LOGIN_COURIER_EMPTY, \
-    INVALID_CREDENTIALS, MESSAGE_CHECK_LOGIN_WITH_INVALID_CREDENTIALS, LOGIN
+    INVALID_CREDENTIALS, MESSAGE_CHECK_LOGIN_WITH_INVALID_CREDENTIALS, LOGIN, USER_ID
 
 
 class LoginCourier(ResponseChecker):
@@ -37,5 +37,5 @@ class LoginCourier(ResponseChecker):
     # Метод проверяет, что возвращается id пользователя в теле
     def check_response_is_id(self):
         response_body = self.response.json()
-        assert response_body["id"] == 297526
+        assert response_body["id"] == USER_ID
 
